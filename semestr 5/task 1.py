@@ -3,11 +3,13 @@
 # A = 2; B = 3 -> 8
 
 
-def degree(a, b):
-    if b == 0:
-        return 1
-    return degree(a, b - 1) * a
+a = int(input("Введите число A: "))
+b = int(input("Введите число B: "))
 
-f = int(input())
-k = int(input())
-print(degree(f, k))
+def degree(a, b):
+    if b == 1:
+        return a
+    if b != 1:
+        return degree(a, b - 1) * a
+
+print(degree(a, b))
